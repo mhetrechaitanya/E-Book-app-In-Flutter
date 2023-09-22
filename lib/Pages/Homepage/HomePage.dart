@@ -1,5 +1,6 @@
 import 'package:e_book/Components/BookCard.dart';
 import 'package:e_book/Components/BookTile.dart';
+import 'package:e_book/Components/demo.dart';
 import 'package:e_book/Config/Colors.dart';
 import 'package:e_book/Models/Data.dart';
 import 'package:e_book/Pages/Homepage/Widgets/AppBar.dart';
@@ -152,17 +153,20 @@ class HomePage extends StatelessWidget {
                   SizedBox(height: 10),
                   Column(
                       children: bookData
-                          .map((e) => BookTile(
-                              title: e.title!,
-                              coverUrl: e.coverUrl!,
-                              author: e.author!,
-                              price: e.price!,
-                              rating: e.rating!,
-                              totalRating: e.numberofRating!))
+                          .map(
+                            (e) => BookTile(
+                                title: e.title!,
+                                coverUrl: e.coverUrl!,
+                                author: e.author!,
+                                price: e.price!,
+                                rating: e.rating!,
+                                totalRating: e.numberofRating!),
+                          )
                           .toList())
                 ],
               ),
             ),
+            demo(),
           ],
         ),
       ),
