@@ -25,6 +25,15 @@ class BookPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          pdfController.pdfViewerKey.currentState?.openBookmarkView();
+        },
+        child: Icon(
+          Icons.bookmark,
+          color: Theme.of(context).colorScheme.background,
+        ),
+      ),
       body: SfPdfViewer.network(
         'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
         key: pdfController.pdfViewerKey,
