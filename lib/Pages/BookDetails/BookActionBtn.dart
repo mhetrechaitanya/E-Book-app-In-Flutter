@@ -1,5 +1,7 @@
+import 'package:e_book/Pages/BookPage/BookPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class BookActionBtn extends StatelessWidget {
   const BookActionBtn({super.key});
@@ -15,18 +17,23 @@ class BookActionBtn extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            children: [
-              SvgPicture.asset("Assets/Icons/book.svg"),
-              SizedBox(width: 10),
-              Text(
-                "READ BOOK",
-                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: Theme.of(context).colorScheme.background,
-                      letterSpacing: 1.2,
-                    ),
-              ),
-            ],
+          InkWell(
+            onTap: () {
+              Get.to(BookPage());
+            },
+            child: Row(
+              children: [
+                SvgPicture.asset("Assets/Icons/book.svg"),
+                SizedBox(width: 10),
+                Text(
+                  "READ BOOK",
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        color: Theme.of(context).colorScheme.background,
+                        letterSpacing: 1.2,
+                      ),
+                ),
+              ],
+            ),
           ),
           Container(
             width: 3,
