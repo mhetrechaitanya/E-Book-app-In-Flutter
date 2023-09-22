@@ -17,6 +17,7 @@ var lightTheme = ThemeData(
     onBackground: fontColor,
     surface: backgroudColor,
     onSurface: fontColor,
+    onPrimaryContainer: secondLebelColor,
   ),
 
   // ❤️  Text Style Define

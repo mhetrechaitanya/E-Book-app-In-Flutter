@@ -1,13 +1,13 @@
 import 'package:e_book/Components/BookCard.dart';
 import 'package:e_book/Components/BookTile.dart';
-import 'package:e_book/Components/demo.dart';
-import 'package:e_book/Config/Colors.dart';
 import 'package:e_book/Models/Data.dart';
+import 'package:e_book/Pages/BookDetails/BookDetails.dart';
 import 'package:e_book/Pages/Homepage/Widgets/AppBar.dart';
 import 'package:e_book/Pages/Homepage/Widgets/CategoryWidget.dart';
 import 'package:e_book/Pages/Homepage/Widgets/MyInputeTextField.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -135,7 +135,9 @@ class HomePage extends StatelessWidget {
                             (e) => BookCard(
                               title: e.title!,
                               coverUrl: e.coverUrl!,
-                              ontap: () {},
+                              ontap: () {
+                                Get.to(BookDetails());
+                              },
                             ),
                           )
                           .toList(),
@@ -166,7 +168,6 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            demo(),
           ],
         ),
       ),
