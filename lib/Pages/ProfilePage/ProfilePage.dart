@@ -3,6 +3,7 @@ import 'package:e_book/Components/BookTile.dart';
 import 'package:e_book/Components/PrimaryButton.dart';
 import 'package:e_book/Config/Colors.dart';
 import 'package:e_book/Models/Data.dart';
+import 'package:e_book/Pages/AddNewBook/AddNewBook.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -17,7 +18,9 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.to(AddNewBookPage());
+        },
         child: Icon(
           Icons.add,
           color: Theme.of(context).colorScheme.background,
