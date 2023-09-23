@@ -81,9 +81,11 @@ class WelcomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10),
             child: PrimaryButton(
-              btnName: "CONTINOUE",
+              btnName: "LOGIN WITH GOOGLE",
               ontap: () {
-                Get.offAll(HomePage());
+                Get.offAll(
+                  HomePage(),
+                );
               },
             ),
           )

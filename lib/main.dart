@@ -1,4 +1,5 @@
 import 'package:e_book/Config/Themes.dart';
+import 'package:e_book/Pages/SplacePage/SplacePage.dart';
 import 'package:e_book/Pages/WelcomePage/WelcomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'E BOOK',
       theme: lightTheme,
       home: const WelcomePage(),
+      // home: SplacePage(),
     );
   }
 }
