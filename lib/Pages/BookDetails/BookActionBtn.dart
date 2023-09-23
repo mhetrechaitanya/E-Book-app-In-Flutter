@@ -4,7 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class BookActionBtn extends StatelessWidget {
-  const BookActionBtn({super.key});
+  final String bookUrl;
+  const BookActionBtn({super.key, required this.bookUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,9 @@ class BookActionBtn extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              Get.to(BookPage());
+              Get.to(BookPage(
+                bookUrl: bookUrl,
+              ));
             },
             child: Row(
               children: [

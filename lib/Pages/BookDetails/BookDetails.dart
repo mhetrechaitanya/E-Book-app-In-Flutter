@@ -1,12 +1,14 @@
 import 'package:e_book/Components/BackButton.dart';
 import 'package:e_book/Config/Colors.dart';
+import 'package:e_book/Models/BookModel.dart';
 import 'package:e_book/Pages/BookDetails/BookActionBtn.dart';
 import 'package:e_book/Pages/BookDetails/HeaderWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class BookDetails extends StatelessWidget {
-  const BookDetails({super.key});
+  final BookModel book;
+  const BookDetails({super.key, required this.book});
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +18,20 @@ class BookDetails extends StatelessWidget {
           children: [
             Container(
               padding: EdgeInsets.all(20),
-              // height: 500,
               color: primaryColor,
               child: Row(
                 children: [
                   Expanded(
-                    child: BookDetailsHeader(),
+                    child: BookDetailsHeader(
+                      coverUrl: book.coverUrl!,
+                      title: book.title!,
+                      author: book.author!,
+                      description: book.description!,
+                      rating: book.rating!,
+                      pages: book.pages.toString(),
+                      langugae: book.language.toString(),
+                      audioLen: book.audioLen!,
+                    ),
                   )
                 ],
               ),
@@ -45,7 +55,7 @@ class BookDetails extends StatelessWidget {
                     children: [
                       Flexible(
                         child: Text(
-                          "n publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum",
+                          book.description!,
                           style: Theme.of(context).textTheme.labelMedium,
                         ),
                       ),
@@ -65,14 +75,14 @@ class BookDetails extends StatelessWidget {
                     children: [
                       Flexible(
                         child: Text(
-                          "n publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum",
+                          book.aboutAuthor!,
                           style: Theme.of(context).textTheme.labelMedium,
                         ),
                       ),
                     ],
                   ),
                   SizedBox(height: 30),
-                  BookActionBtn(),
+                  BookActionBtn(bookUrl: book.bookurl!,),
                 ],
               ),
             )

@@ -5,7 +5,8 @@ import 'package:get/get.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class BookPage extends StatelessWidget {
-  const BookPage({super.key});
+  final String bookUrl;
+  const BookPage({super.key, required this.bookUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class BookPage extends StatelessWidget {
         ),
       ),
       body: SfPdfViewer.network(
-        'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+        bookUrl,
         key: pdfController.pdfViewerKey,
       ),
     );

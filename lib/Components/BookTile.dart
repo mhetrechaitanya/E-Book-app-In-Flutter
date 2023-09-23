@@ -8,6 +8,7 @@ class BookTile extends StatelessWidget {
   final int price;
   final String rating;
   final int totalRating;
+  final VoidCallback ontap;
 
   const BookTile({
     super.key,
@@ -16,7 +17,7 @@ class BookTile extends StatelessWidget {
     required this.author,
     required this.price,
     required this.rating,
-    required this.totalRating,
+    required this.totalRating, required this.ontap,
   });
 
   @override
@@ -24,7 +25,7 @@ class BookTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: InkWell(
-        onTap: () {},
+        onTap: ontap,
         child: Container(
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(

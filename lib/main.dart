@@ -1,5 +1,5 @@
 import 'package:e_book/Config/Themes.dart';
-import 'package:e_book/Pages/WelcomePage.dart';
+import 'package:e_book/Pages/WelcomePage/WelcomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

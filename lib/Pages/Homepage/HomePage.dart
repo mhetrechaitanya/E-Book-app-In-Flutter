@@ -136,7 +136,9 @@ class HomePage extends StatelessWidget {
                               title: e.title!,
                               coverUrl: e.coverUrl!,
                               ontap: () {
-                                Get.to(BookDetails());
+                                Get.to(BookDetails(
+                                  book: e,
+                                ));
                               },
                             ),
                           )
@@ -157,6 +159,9 @@ class HomePage extends StatelessWidget {
                       children: bookData
                           .map(
                             (e) => BookTile(
+                                ontap: () {
+                                  Get.to(BookDetails(book: e));
+                                },
                                 title: e.title!,
                                 coverUrl: e.coverUrl!,
                                 author: e.author!,
