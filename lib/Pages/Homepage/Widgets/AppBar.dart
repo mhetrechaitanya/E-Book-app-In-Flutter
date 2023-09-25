@@ -13,7 +13,11 @@ class HomeAppBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SvgPicture.asset("Assets/Icons/dashboard.svg"),
+        InkWell(
+            onTap: () {
+              Scaffold.of(context).openDrawer();
+            },
+            child: SvgPicture.asset("Assets/Icons/dashboard.svg")),
         Text(
           "E-BOOK",
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(

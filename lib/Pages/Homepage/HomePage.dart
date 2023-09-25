@@ -1,5 +1,6 @@
 import 'package:e_book/Components/BookCard.dart';
 import 'package:e_book/Components/BookTile.dart';
+import 'package:e_book/Components/MyDrawer.dart';
 import 'package:e_book/Models/Data.dart';
 import 'package:e_book/Pages/BookDetails/BookDetails.dart';
 import 'package:e_book/Pages/Homepage/Widgets/AppBar.dart';
@@ -15,6 +16,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: myDrawer,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -156,20 +158,21 @@ class HomePage extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Column(
-                      children: bookData
-                          .map(
-                            (e) => BookTile(
-                                ontap: () {
-                                  Get.to(BookDetails(book: e));
-                                },
-                                title: e.title!,
-                                coverUrl: e.coverUrl!,
-                                author: e.author!,
-                                price: e.price!,
-                                rating: e.rating!,
-                                totalRating: e.numberofRating!),
-                          )
-                          .toList())
+                    children: bookData
+                        .map(
+                          (e) => BookTile(
+                              ontap: () {
+                                Get.to(BookDetails(book: e));
+                              },
+                              title: e.title!,
+                              coverUrl: e.coverUrl!,
+                              author: e.author!,
+                              price: e.price!,
+                              rating: e.rating!,
+                              totalRating: e.numberofRating!),
+                        )
+                        .toList(),
+                  )
                 ],
               ),
             ),

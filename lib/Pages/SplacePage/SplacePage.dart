@@ -1,4 +1,6 @@
+import 'package:e_book/Controller/SplaceController.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
 class SplacePage extends StatelessWidget {
@@ -6,6 +8,7 @@ class SplacePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SplaceController splaceController = Get.put(SplaceController());
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(

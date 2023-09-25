@@ -17,7 +17,7 @@ class BookDetails extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(20),
+              padding:const EdgeInsets.all(20),
               color: primaryColor,
               child: Row(
                 children: [
@@ -36,7 +36,7 @@ class BookDetails extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+          const  SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(10),
               child: Column(
@@ -50,7 +50,7 @@ class BookDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 8),
+                const  SizedBox(height: 8),
                   Row(
                     children: [
                       Flexible(
@@ -61,7 +61,7 @@ class BookDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                const  SizedBox(height: 20),
                   Row(
                     children: [
                       Text(
@@ -70,7 +70,7 @@ class BookDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 8),
+                 const SizedBox(height: 8),
                   Row(
                     children: [
                       Flexible(
@@ -81,7 +81,7 @@ class BookDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 30),
+                const  SizedBox(height: 30),
                   BookActionBtn(bookUrl: book.bookurl!,),
                 ],
               ),
