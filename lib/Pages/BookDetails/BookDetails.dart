@@ -1,10 +1,8 @@
-import 'package:e_book/Components/BackButton.dart';
 import 'package:e_book/Config/Colors.dart';
 import 'package:e_book/Models/BookModel.dart';
 import 'package:e_book/Pages/BookDetails/BookActionBtn.dart';
 import 'package:e_book/Pages/BookDetails/HeaderWidget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class BookDetails extends StatelessWidget {
   final BookModel book;
@@ -17,7 +15,7 @@ class BookDetails extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding:const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               color: primaryColor,
               child: Row(
                 children: [
@@ -36,7 +34,7 @@ class BookDetails extends StatelessWidget {
                 ],
               ),
             ),
-          const  SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(10),
               child: Column(
@@ -50,7 +48,7 @@ class BookDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                const  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Row(
                     children: [
                       Flexible(
@@ -61,7 +59,7 @@ class BookDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                const  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(
                     children: [
                       Text(
@@ -70,7 +68,7 @@ class BookDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                 const SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Row(
                     children: [
                       Flexible(
@@ -81,8 +79,10 @@ class BookDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                const  SizedBox(height: 30),
-                  BookActionBtn(bookUrl: book.bookurl!,),
+                  const SizedBox(height: 30),
+                  BookActionBtn(
+                    bookUrl: book.bookurl!,
+                  ),
                 ],
               ),
             )

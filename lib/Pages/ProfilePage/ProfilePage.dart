@@ -2,6 +2,7 @@ import 'package:e_book/Components/BackButton.dart';
 import 'package:e_book/Components/BookTile.dart';
 import 'package:e_book/Components/PrimaryButton.dart';
 import 'package:e_book/Config/Colors.dart';
+import 'package:e_book/Controller/AuthController.dart';
 import 'package:e_book/Models/Data.dart';
 import 'package:e_book/Pages/AddNewBook/AddNewBook.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AuthController authController = Get.put(AuthController());
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -55,7 +57,14 @@ class ProfilePage extends StatelessWidget {
                                       Theme.of(context).colorScheme.background,
                                 ),
                           ),
-                          SizedBox(width: 70)
+                          IconButton(
+                              onPressed: () {
+                                authController.signout();
+                              },
+                              icon: Icon(
+                                Icons.exit_to_app,
+                                color: Theme.of(context).colorScheme.background,
+                              ))
                         ],
                       ),
                       SizedBox(height: 60),
