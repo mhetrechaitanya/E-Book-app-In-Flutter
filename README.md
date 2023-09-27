@@ -1,6 +1,8 @@
 
 # 📙 E Book App In Flutter
 This app is make for reading online e book i have made this app in flutter if you want to see all Tutorial of This App in video formate follow my.
+youtube channel ❤️ 
+<a href="https://www.github.com/MrNitishroy](https://mrnitishroy.github.io/)https://mrnitishroy.github.io](https://www.youtube.com/@flutterhero/videos" target="blank">FlutterHero</a>
 
 
 
@@ -26,6 +28,22 @@ This app is make for reading online e book i have made this app in flutter if yo
 - Update Book
 - User Management 
 
+## Packages used 
+ - cupertino_icons: ^1.0.2
+ -  get: ^4.6.6
+ - flutter_svg: ^2.0.7
+ - syncfusion_flutter_pdfviewer: ^23.1.36
+ - lottie: ^2.6.0
+ - firebase_core: ^2.16.0
+ - google_sign_in: ^6.1.5
+ - firebase_auth: ^4.10.0
+ - fluttertoast: ^8.2.2
+ - file_picker: ^5.5.0
+-  cloud_firestore: ^4.9.2
+ - firebase_storage: ^11.2.7
+ - image_picker: ^1.0.4
+ - uuid: ^3.0.7
+   
 ## Colors Reference Are Used In this projects 
 
 | Color             | Hex                                                                |
@@ -63,5 +81,5 @@ run app
 
 ## Authors
 
-- [@MrNitishRoy](https://www.github.com/MrNitishroy)
+<a href="https://www.github.com/MrNitishroy](https://mrnitishroy.github.io/)https://mrnitishroy.github.io/" target="blank">Nitish Roy </a>
 
