@@ -80,5 +80,5 @@ run app
 
 ## Authors
 
-- [@MrNitishRoy]([https://www.github.com/MrNitishroy](https://mrnitishroy.github.io/)https://mrnitishroy.github.io/])
+- [@MrNitishRoy](https://www.github.com/MrNitishroy](https://mrnitishroy.github.io/)https://mrnitishroy.github.io/)
 
