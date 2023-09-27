@@ -32,7 +32,7 @@ var bookData = [
       coverUrl: "Assets/Images/boundraries.jpg",
       rating: "4.2",
       category: "Documentary",
-      numberofRating: 10,
+      numberofRating: "10,",
       price: 100,
       pages: 234,
       language: "ENG",
@@ -50,7 +50,7 @@ var bookData = [
       rating: "4.2",
       category: "Documentary",
       price: 100,
-      numberofRating: 10,
+      numberofRating: "10,",
       language: "ENG",
       pages: 234,
       bookurl:
@@ -66,7 +66,7 @@ var bookData = [
       coverUrl: "Assets/Images/Give and Take.jpg",
       rating: "4.2",
       category: "Documentary",
-      numberofRating: 10,
+      numberofRating: "10,",
       price: 100,
       language: "ENG",
       pages: 234,
@@ -86,7 +86,7 @@ var bookData = [
     price: 100,
     pages: 234,
     language: "ENG",
-    numberofRating: 10,
+    numberofRating: "10,",
     bookurl:
         "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf",
   )

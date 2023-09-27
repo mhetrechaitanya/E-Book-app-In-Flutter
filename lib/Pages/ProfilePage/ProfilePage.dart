@@ -3,6 +3,7 @@ import 'package:e_book/Components/BookTile.dart';
 import 'package:e_book/Components/PrimaryButton.dart';
 import 'package:e_book/Config/Colors.dart';
 import 'package:e_book/Controller/AuthController.dart';
+import 'package:e_book/Controller/BookController.dart';
 import 'package:e_book/Models/Data.dart';
 import 'package:e_book/Pages/AddNewBook/AddNewBook.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,8 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AuthController authController = Get.put(AuthController());
+    BookController bookController = Get.put(BookController());
+
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -81,8 +84,8 @@ class ProfilePage extends StatelessWidget {
                           height: 120,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(100),
-                            child: Image.asset(
-                              "Assets/Images/boundraries.jpg",
+                            child: Image.network(
+                              "${authController.auth.currentUser!.photoURL}",
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -90,12 +93,12 @@ class ProfilePage extends StatelessWidget {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        "Nitish kumar",
+                        "${authController.auth.currentUser!.displayName}",
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                             color: Theme.of(context).colorScheme.background),
                       ),
                       Text(
-                        "Nitishr@gmail.com",
+                        "${authController.auth.currentUser!.email}",
                         style:
                             Theme.of(context).textTheme.labelMedium?.copyWith(
                                   color: Theme.of(context)
@@ -119,19 +122,21 @@ class ProfilePage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 20),
-                  Column(
-                    children: bookData
-                        .map((e) => BookTile(
-                              title: e.title!,
-                              coverUrl: e.coverUrl!,
-                              author: e.author!,
-                              price: e.price!,
-                              rating: e.rating!,
-                              totalRating: e.numberofRating!,
-                              ontap: () {},
-                            ))
-                        .toList(),
-                  ),
+                  Obx(
+                    () => Column(
+                      children: bookController.currentUserBooks
+                          .map((e) => BookTile(
+                                title: e.title!,
+                                coverUrl: e.coverUrl!,
+                                author: e.author!,
+                                price: e.price!,
+                                rating: e.rating!,
+                                totalRating: 12,
+                                ontap: () {},
+                              ))
+                          .toList(),
+                    ),
+                  )
                 ],
               ),
             ),

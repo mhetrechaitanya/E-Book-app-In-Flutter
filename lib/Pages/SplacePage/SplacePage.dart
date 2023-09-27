@@ -1,3 +1,4 @@
+import 'package:e_book/Controller/BookController.dart';
 import 'package:e_book/Controller/SplaceController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,6 +10,7 @@ class SplacePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SplaceController splaceController = Get.put(SplaceController());
+    BookController bookController = Get.put(BookController());
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
       body: Center(

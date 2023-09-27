@@ -17,7 +17,8 @@ class BookTile extends StatelessWidget {
     required this.author,
     required this.price,
     required this.rating,
-    required this.totalRating, required this.ontap,
+    required this.totalRating,
+    required this.ontap,
   });
 
   @override
@@ -50,7 +51,7 @@ class BookTile extends StatelessWidget {
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: Image.asset(
+                  child: Image.network(
                     coverUrl,
                     width: 100,
                   ),

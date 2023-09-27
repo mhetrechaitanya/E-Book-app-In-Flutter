@@ -32,23 +32,46 @@ class BookController extends GetxController {
   RxBool isPdfUploading = false.obs;
   RxBool isPostUploading = true.obs;
   var bookData = RxList<BookModel>();
+  var currentUserBooks = RxList<BookModel>();
 
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+    getAllBooks();
+   
+  }
 
   void getAllBooks() async {
+    bookData.clear();
+    successMessage("Book Get Fun");
     var books = await db.collection("Books").get();
     for (var book in books.docs) {
       bookData.add(BookModel.fromJson(book.data()));
     }
   }
 
+  void getUserBook() async {
+    currentUserBooks.clear();
+    var books = await db
+        .collection("userBook")
+        .doc(fAuth.currentUser!.uid)
+        .collection("Books")
+        .get();
+    for (var book in books.docs) {
+      currentUserBooks.add(BookModel.fromJson(book.data()));
+    }
+  }
+
   void pickImage() async {
     isImageUploading.value = true;
     final XFile? image =
-        await imagePicker.pickImage(source: ImageSource.camera);
+        await imagePicker.pickImage(source: ImageSource.gallery);
     if (image != null) {
       print(image.path);
       uploadImageToFirebase(File(image.path));
     }
+    isImageUploading.value = false;
   }
 
   void uploadImageToFirebase(File image) async {
@@ -77,6 +100,7 @@ class BookController extends GetxController {
       language: language.text,
       audioLen: audioLen.text,
       audioUrl: "",
+      rating: "",
     );
 
     await db.collection("Books").add(newBook.toJson());
@@ -93,6 +117,8 @@ class BookController extends GetxController {
     imageUrl.value = "";
     pdfUrl.value = "";
     successMessage("Book added to the db");
+    getAllBooks();
+    getUserBook();
   }
 
   void pickPDF() async {
