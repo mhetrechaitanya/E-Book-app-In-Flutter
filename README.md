@@ -18,7 +18,33 @@ youtube channel ❤️
 
 **Server:** Firebase , Dot net
 
-
+## Video TimeStamp 
+00:00:00 Project demo 
+00:04:45 Project Github Documetation 
+00:14:25 Config : Color Define 
+00:16:49 Config : Theme define 
+00:29:55 Config : Colleting All Assets
+00:35:44 Config : Creating Book Model 
+00:42:35 Page : Welcome Page
+01:02:07 Page : Home page
+02:10:06 Page : Book Details Page 
+02:40:40 Page : Book Read Page 
+02:52:02 Logic : Send Data from One page to Another page 
+03:06:10 Page : User Profile Page 
+03:21:37 Page : Add New Book Page 
+03:49:35 Page : Splace Page
+03:56:20 Logic : Splace Controller 
+04:00:28 Logic : Firebase Setup 
+04:10:34 Logic : Login Function With Google 
+04:34:28 Logic : Redirect Login user to homepage
+04:37:46 Logic : Add New Book in Firebase 
+04:44:35 Logic : Image Upload to Firebase database
+04:53:50 Logic : Pdf Upload to Firebase Database
+04:59:00 Logic : Add book in database
+05:06:39 Logic : Add Loading Animation
+05:37:17 Logic : Get All Books 
+05:55:25 Logic : Get Only User Book Data 
+06:10:59 End : Please ❤️ Like and Subscribe 
 ## Features
 
 - Pdf Reading View
