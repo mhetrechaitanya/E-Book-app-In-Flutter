@@ -157,4 +157,5 @@ class BookController extends GetxController {
         .collection("Books")
         .add(book.toJson());
   }
+
 }
