@@ -18,7 +18,6 @@ youtube channel ❤️
 
 **Server:** Firebase , Dot net
 
-
 ## Features
 
 - Pdf Reading View
